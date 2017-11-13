@@ -56,6 +56,11 @@
 		CCF00D1E1FBA1816004F8350 /* bracket */ = {
 			isa = PBXGroup;
 			children = (
+				CCF00D371FBA18F7004F8350 /* Services */,
+				CCF00D361FBA18D5004F8350 /* Extensions */,
+				CCF00D351FBA18BF004F8350 /* Model */,
+				CCF00D341FBA18A7004F8350 /* View */,
+				CCF00D331FBA18A0004F8350 /* Controller */,
 				CCF00D1F1FBA1816004F8350 /* AppDelegate.swift */,
 				CCF00D211FBA1816004F8350 /* FirstViewController.swift */,
 				CCF00D231FBA1816004F8350 /* SecondViewController.swift */,
@@ -65,6 +70,41 @@
 				CCF00D2D1FBA1816004F8350 /* Info.plist */,
 			);
 			path = bracket;
+			sourceTree = "<group>";
+		};
+		CCF00D331FBA18A0004F8350 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CCF00D341FBA18A7004F8350 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CCF00D351FBA18BF004F8350 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CCF00D361FBA18D5004F8350 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CCF00D371FBA18F7004F8350 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
