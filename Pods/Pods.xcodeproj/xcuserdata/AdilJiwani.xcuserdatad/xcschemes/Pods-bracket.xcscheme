@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9535E38AD2C930839E2D3DB18BEF934B"
+               BlueprintIdentifier = "B2CCEF9AABA4EB5D3B6191F9FF7A7527"
                BuildableName = "Pods_bracket.framework"
                BlueprintName = "Pods-bracket"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9535E38AD2C930839E2D3DB18BEF934B"
+            BlueprintIdentifier = "B2CCEF9AABA4EB5D3B6191F9FF7A7527"
             BuildableName = "Pods_bracket.framework"
             BlueprintName = "Pods-bracket"
             ReferencedContainer = "container:Pods.xcodeproj">
