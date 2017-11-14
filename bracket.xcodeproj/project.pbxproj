@@ -21,6 +21,7 @@
 		CCF00D421FBA4873004F8350 /* InsetTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF00D411FBA4873004F8350 /* InsetTextField.swift */; };
 		CCF00D441FBA4EF0004F8350 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF00D431FBA4EF0004F8350 /* ShadowView.swift */; };
 		CCF00D461FBB41BA004F8350 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF00D451FBB41BA004F8350 /* AuthService.swift */; };
+		CCF00D481FBB7E42004F8350 /* MeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF00D471FBB7E42004F8350 /* MeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		CCF00D411FBA4873004F8350 /* InsetTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetTextField.swift; sourceTree = "<group>"; };
 		CCF00D431FBA4EF0004F8350 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		CCF00D451FBB41BA004F8350 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		CCF00D471FBB7E42004F8350 /* MeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeVC.swift; sourceTree = "<group>"; };
 		D41A294579AB9431F4819815 /* Pods-bracket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bracket.release.xcconfig"; path = "Pods/Target Support Files/Pods-bracket/Pods-bracket.release.xcconfig"; sourceTree = "<group>"; };
 		FEE5DFE61766B4BD9B5C6417 /* Pods_bracket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bracket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -116,6 +118,7 @@
 			children = (
 				CCF00D3C1FBA47E9004F8350 /* AuthVC.swift */,
 				CCF00D3F1FBA4822004F8350 /* LoginVC.swift */,
+				CCF00D471FBB7E42004F8350 /* MeVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCF00D481FBB7E42004F8350 /* MeVC.swift in Sources */,
 				CCF00D3D1FBA47E9004F8350 /* AuthVC.swift in Sources */,
 				CCF00D241FBA1816004F8350 /* GroupsVC.swift in Sources */,
 				CCF00D401FBA4822004F8350 /* LoginVC.swift in Sources */,
