@@ -279,6 +279,9 @@
                                     <constraint firstAttribute="width" constant="30" id="r41-1x-hPW"/>
                                 </constraints>
                                 <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="closePressed:" destination="rRX-t5-bV9" eventType="touchUpInside" id="zsG-km-i3q"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3al-hr-B9d">
                                 <rect key="frame" x="147.5" y="259" width="80" height="33"/>
@@ -289,6 +292,9 @@
                                 <state key="normal" title="SIGN IN">
                                     <color key="titleColor" red="0.015686274510000001" green="0.6705882353" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="signInPressed:" destination="rRX-t5-bV9" eventType="touchUpInside" id="1ah-hx-uqw"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="A16-cA-Zf1">
                                 <rect key="frame" x="36" y="78" width="303" height="161"/>
@@ -334,6 +340,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TVK-kM-Ag1"/>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="YeT-ir-lDo" id="dpq-Z3-cI3"/>
+                        <outlet property="passwordField" destination="9n2-Zc-Ulv" id="Dxo-k8-WaF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cB8-Sw-VR7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
