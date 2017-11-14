@@ -105,6 +105,9 @@
                                             <constraint firstAttribute="height" constant="30" id="mR9-B0-VSO"/>
                                         </constraints>
                                         <state key="normal" image="logoutIcon"/>
+                                        <connections>
+                                            <action selector="signOutPressed:" destination="Zxd-BI-JO8" eventType="touchUpInside" id="RQj-s2-u9R"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_me" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORt-EW-y3X">
                                         <rect key="frame" x="138" y="35" width="100" height="21"/>
@@ -189,6 +192,11 @@
                         <viewLayoutGuide key="safeArea" id="DlA-KG-IXW"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Me" image="me-tabIcon" selectedImage="me-tabIcon" id="dMy-qh-Uh8"/>
+                    <connections>
+                        <outlet property="emailLbl" destination="gvs-2G-6Sy" id="1FE-Ms-Awk"/>
+                        <outlet property="profileImg" destination="g1m-Dt-aCD" id="obh-sO-BZa"/>
+                        <outlet property="tableview" destination="xX8-dB-mce" id="WBa-t7-3Bg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Ts-45-qdL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

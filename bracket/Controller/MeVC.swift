@@ -10,10 +10,15 @@ import UIKit
 
 class MeVC: UIViewController {
 
+    @IBOutlet weak var profileImg: UIImageView!
+    @IBOutlet weak var emailLbl: UILabel!
+    @IBOutlet weak var tableview: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
+    @IBAction func signOutPressed(_ sender: Any) {
+    }
 }
