@@ -25,6 +25,7 @@
 		CCF00D4A1FBB83E7004F8350 /* CreatePostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF00D491FBB83E7004F8350 /* CreatePostVC.swift */; };
 		CCF00D4C1FBB87F1004F8350 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF00D4B1FBB87F1004F8350 /* UIViewExt.swift */; };
 		CCF00D4E1FBE0CB3004F8350 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF00D4D1FBE0CB3004F8350 /* FeedCell.swift */; };
+		CCF00D501FBE0E93004F8350 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF00D4F1FBE0E93004F8350 /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		CCF00D491FBB83E7004F8350 /* CreatePostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostVC.swift; sourceTree = "<group>"; };
 		CCF00D4B1FBB87F1004F8350 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		CCF00D4D1FBE0CB3004F8350 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		CCF00D4F1FBE0E93004F8350 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		D41A294579AB9431F4819815 /* Pods-bracket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bracket.release.xcconfig"; path = "Pods/Target Support Files/Pods-bracket/Pods-bracket.release.xcconfig"; sourceTree = "<group>"; };
 		FEE5DFE61766B4BD9B5C6417 /* Pods_bracket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bracket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -143,6 +145,7 @@
 		CCF00D351FBA18BF004F8350 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CCF00D4F1FBE0E93004F8350 /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				CCF00D221FBA1816004F8350 /* FeedVC.swift in Sources */,
 				CCF00D421FBA4873004F8350 /* InsetTextField.swift in Sources */,
 				CCF00D3B1FBA1E01004F8350 /* DataService.swift in Sources */,
+				CCF00D501FBE0E93004F8350 /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
