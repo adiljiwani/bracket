@@ -44,7 +44,12 @@ extension FeedVC: UITableViewDelegate, UITableViewDataSource {
         
         let image = UIImage(named: "defaultProfileImage")
         let message = messageArray[indexPath.row]
-        cell.configureCell(profileImage: image!, email: message.senderid, content: message.content)
+        
+        DataService.instance.getUsername(forUid: message.senderid) { (returnedUsername) in
+            cell.configureCell(profileImage: image!, email: returnedUsername, content: message.content)
+        }
+        
+        
         
         return cell
     }
