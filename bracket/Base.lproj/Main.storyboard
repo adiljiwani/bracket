@@ -366,10 +366,10 @@
             </objects>
             <point key="canvasLocation" x="1797.5999999999999" y="-20.239880059970016"/>
         </scene>
-        <!--View Controller-->
+        <!--Create GroupVC-->
         <scene sceneID="If6-h0-HB5">
             <objects>
-                <viewController id="U3P-Eo-HEj" sceneMemberID="viewController">
+                <viewController id="U3P-Eo-HEj" customClass="CreateGroupVC" customModule="bracket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ryY-r0-ORe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -401,6 +401,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4X-rH-6TO">
                                         <rect key="frame" x="20" y="34" width="21" height="22"/>
                                         <state key="normal" image="close"/>
+                                        <connections>
+                                            <action selector="closePressed:" destination="U3P-Eo-HEj" eventType="touchUpInside" id="xCh-H9-dlk"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.16078431369999999" green="0.16862745100000001" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -430,8 +433,8 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Ira-IH-tQ6"/>
                                         </constraints>
-                                        <color key="textColor" red="0.25490196079999999" green="0.27058823529999998" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.56078431370000004" green="0.81176470590000005" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DESCRIPTION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wL6-si-HxJ">
@@ -446,8 +449,8 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="czV-BL-uR7"/>
                                         </constraints>
-                                        <color key="textColor" red="0.25490196079999999" green="0.27058823529999998" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.56078431370000004" green="0.81176470590000005" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="add people to your group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXk-ef-RmA">
@@ -462,13 +465,13 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="wYb-c7-smG"/>
                                         </constraints>
-                                        <color key="textColor" red="0.25490196079999999" green="0.27058823529999998" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.56078431370000004" green="0.81176470590000005" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JUF-YP-Qkz">
                                         <rect key="frame" x="0.0" y="208" width="335" height="349"/>
-                                        <color key="backgroundColor" red="0.25490196079999999" green="0.27058823529999998" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.16078431369999999" green="0.16862745100000001" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="5HR-qj-yND">
                                                 <rect key="frame" x="0.0" y="28" width="335" height="44"/>
@@ -495,6 +498,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="v6b-nG-Df2"/>
                     </view>
+                    <connections>
+                        <outlet property="descriptionTextField" destination="Hvn-iq-eGC" id="nub-Jb-tkI"/>
+                        <outlet property="doneBtn" destination="eSn-7g-Y7D" id="kh6-Hl-XSi"/>
+                        <outlet property="donePressed" destination="eSn-7g-Y7D" id="Bvp-E4-ZvN"/>
+                        <outlet property="emailSearchTextField" destination="Rrt-1p-aov" id="kCF-DY-xyr"/>
+                        <outlet property="groupMemberLbl" destination="QXk-ef-RmA" id="6Xe-ax-PJo"/>
+                        <outlet property="tableView" destination="JUF-YP-Qkz" id="NNO-rY-8Jb"/>
+                        <outlet property="titleTextField" destination="465-EK-Uib" id="r5n-dk-WN0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5go-e0-3li" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
