@@ -20,12 +20,32 @@ class CreateGroupVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.dataSource = self
     }
 
     @IBAction func closePressed(_ sender: Any) {
     }
     
-    @IBOutlet weak var donePressed: UIButton!
+    @IBAction func donePressed(_ sender: Any) {
+    }
+    
+}
+
+extension CreateGroupVC: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "userCell") as? UserCell else {return UITableViewCell()}
+        let profileImage = UIImage(named: "defaultProfileImage")
+        let email = "user@gmail.com"
+        cell.configureCell(profileImage: profileImage!, email: email, isSelected: true)
+        return cell
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
 }
