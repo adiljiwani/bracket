@@ -16,6 +16,7 @@ class LoginVC: UIViewController {
         super.viewDidLoad()
         emailField.delegate = self
         passwordField.delegate = self
+        
     }
     
     @IBAction func signInPressed(_ sender: Any) {
@@ -41,9 +42,12 @@ class LoginVC: UIViewController {
         }
     }
     
+    
     @IBAction func closePressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
+    
 }
 
 extension LoginVC: UITextFieldDelegate {

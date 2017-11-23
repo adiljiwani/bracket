@@ -878,7 +878,7 @@
                                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="fbSignInPressed:" destination="myd-Yd-Cju" eventType="touchUpInside" id="DHX-OX-dwE"/>
+                                                    <action selector="fbSignInPressed:" destination="myd-Yd-Cju" eventType="touchUpInside" id="PuC-5F-VLT"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsl-jm-LMa">
