@@ -370,7 +370,7 @@
         <!--Group FeedVC-->
         <scene sceneID="VAj-8b-ZuS">
             <objects>
-                <viewController id="Cna-hz-FX6" customClass="GroupFeedVC" customModule="bracket" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GroupFeedVC" id="Cna-hz-FX6" customClass="GroupFeedVC" customModule="bracket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cJz-Fn-wNK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -378,7 +378,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fc9-Hf-OkO">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="_grouptitle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jb-g1-IZf">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_grouptitle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jb-g1-IZf">
                                         <rect key="frame" x="88" y="35" width="200" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="KzE-fb-OEu"/>
@@ -388,7 +388,7 @@
                                         <color key="textColor" red="0.56078431370000004" green="0.81176470590000005" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iK1-k1-elm">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iK1-k1-elm">
                                         <rect key="frame" x="20" y="34" width="12" height="22"/>
                                         <state key="normal" image="backIcon"/>
                                         <connections>
@@ -400,6 +400,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="0YH-0S-tz7"/>
                                     <constraint firstAttribute="height" constant="70" id="4dD-tI-2Fz"/>
+                                    <constraint firstItem="iK1-k1-elm" firstAttribute="top" secondItem="Fc9-Hf-OkO" secondAttribute="top" constant="34" id="8yV-km-myK"/>
                                     <constraint firstItem="8jb-g1-IZf" firstAttribute="centerY" secondItem="iK1-k1-elm" secondAttribute="centerY" id="CA9-oC-iMw"/>
                                     <constraint firstItem="iK1-k1-elm" firstAttribute="leading" secondItem="Fc9-Hf-OkO" secondAttribute="leading" constant="20" id="OYB-fL-aOJ"/>
                                     <constraint firstItem="8jb-g1-IZf" firstAttribute="centerX" secondItem="Fc9-Hf-OkO" secondAttribute="centerX" id="QqJ-E8-Wm8"/>
@@ -462,7 +463,7 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user@bracket.com, hello@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="K99-si-nkh">
-                                <rect key="frame" x="20" y="78" width="355" height="16.5"/>
+                                <rect key="frame" x="20" y="78" width="335" height="16.5"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
                                 <color key="textColor" red="0.56078431370000004" green="0.81176470590000005" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -504,7 +505,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.25490196079999999" green="0.27058823529999998" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="e4e-rF-8uJ" firstAttribute="trailing" secondItem="K99-si-nkh" secondAttribute="trailing" id="5ov-4G-Dlk"/>
+                            <constraint firstItem="e4e-rF-8uJ" firstAttribute="trailing" secondItem="K99-si-nkh" secondAttribute="trailing" constant="20" id="5ov-4G-Dlk"/>
                             <constraint firstItem="K99-si-nkh" firstAttribute="leading" secondItem="e4e-rF-8uJ" secondAttribute="leading" constant="20" id="9UO-4J-Kuv"/>
                             <constraint firstItem="Fc9-Hf-OkO" firstAttribute="top" secondItem="cJz-Fn-wNK" secondAttribute="top" id="FCj-38-iqa"/>
                             <constraint firstItem="icp-Qg-sTU" firstAttribute="top" secondItem="K99-si-nkh" secondAttribute="bottom" constant="8" id="IEk-ig-DU5"/>
