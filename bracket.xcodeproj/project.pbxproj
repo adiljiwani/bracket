@@ -12,6 +12,7 @@
 		CC56A9081FC724E8004121C3 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC56A9071FC724E8004121C3 /* Group.swift */; };
 		CC7EC1811FC7300F002CCDE5 /* GroupFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7EC1801FC7300F002CCDE5 /* GroupFeedCell.swift */; };
 		CC7EC1831FC73082002CCDE5 /* GroupFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7EC1821FC73082002CCDE5 /* GroupFeedVC.swift */; };
+		CC7EC1851FC74E70002CCDE5 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7EC1841FC74E70002CCDE5 /* UIViewControllerExt.swift */; };
 		CCF00D201FBA1816004F8350 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF00D1F1FBA1816004F8350 /* AppDelegate.swift */; };
 		CCF00D221FBA1816004F8350 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF00D211FBA1816004F8350 /* FeedVC.swift */; };
 		CCF00D241FBA1816004F8350 /* GroupsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF00D231FBA1816004F8350 /* GroupsVC.swift */; };
@@ -40,6 +41,7 @@
 		CC56A9071FC724E8004121C3 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		CC7EC1801FC7300F002CCDE5 /* GroupFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFeedCell.swift; sourceTree = "<group>"; };
 		CC7EC1821FC73082002CCDE5 /* GroupFeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFeedVC.swift; sourceTree = "<group>"; };
+		CC7EC1841FC74E70002CCDE5 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		CCF00D1C1FBA1816004F8350 /* bracket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bracket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCF00D1F1FBA1816004F8350 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCF00D211FBA1816004F8350 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				CCF00D4B1FBB87F1004F8350 /* UIViewExt.swift */,
+				CC7EC1841FC74E70002CCDE5 /* UIViewControllerExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				CCF00D481FBB7E42004F8350 /* MeVC.swift in Sources */,
 				CC56A9061FC72112004121C3 /* GroupCell.swift in Sources */,
 				CCF00D3D1FBA47E9004F8350 /* AuthVC.swift in Sources */,
+				CC7EC1851FC74E70002CCDE5 /* UIViewControllerExt.swift in Sources */,
 				CCF00D241FBA1816004F8350 /* GroupsVC.swift in Sources */,
 				CC7EC1831FC73082002CCDE5 /* GroupFeedVC.swift in Sources */,
 				CC7EC1811FC7300F002CCDE5 /* GroupFeedCell.swift in Sources */,
