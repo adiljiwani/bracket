@@ -24,6 +24,13 @@ class AuthService {
         }
     }
     
+    func registerFbUser(withEmail email: String, userCreationComplete: @escaping (_ status: Bool) -> ()) {
+        guard let user = Auth.auth().currentUser else {return}
+        let userData = ["provider": user.providerID, "email": user.email]
+            DataService.instance.createDBUser(uid: user.uid, userData: userData)
+            userCreationComplete(true)
+        }
+    
     func loginUser(withEmail email: String, andPassword password: String, loginComplete: @escaping (_ status: Bool, _ error: Error?) -> ()) {
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             if error != nil {

@@ -14,7 +14,9 @@ import FBSDKCoreKit
 import FBSDKLoginKit
 
 class AuthVC: UIViewController {
-
+    
+    @IBOutlet weak var googleSignIn: GIDSignInButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -25,35 +27,45 @@ class AuthVC: UIViewController {
             dismiss(animated: true, completion: nil)
         }
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        if AccessToken.current != nil {
-            print("HELLOOOOOOO")
-        } else {
-            print("hello")
-        }
-    }
-    
     @IBAction func signInWithEmailPressed(_ sender: Any) {
         let loginVC = storyboard?.instantiateViewController(withIdentifier: "LoginVC")
         present(loginVC!, animated: true, completion: nil)
     }
+    
     @IBAction func googleSignInPressed(_ sender: Any) {
     }
     @IBAction func fbSignInPressed(_ sender: Any) {
-        let loginManager = LoginManager()
-        loginManager.logIn(readPermissions:[ .publicProfile, .email ], viewController: nil) { loginResult in
-            switch loginResult {
-            case .failed(let error):
-                print(error)
-            case .cancelled:
-                print("User cancelled login.")
-            case .success(let grantedPermissions, let declinedPermissions, let accessToken):
-                print("Logged in!\(accessToken)")
-                self.dismiss(animated: true, completion: nil)
+        let fbLoginManager = FBSDKLoginManager()
+        fbLoginManager.logIn(withReadPermissions: ["public_profile", "email"], from: self) { (result, error) in
+            if let error = error {
+                print("Failed to login: \(error.localizedDescription)")
+                return
             }
+            
+            guard let accessToken = FBSDKAccessToken.current() else {
+                print("Failed to get access token")
+                return
+            }
+            
+            let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.tokenString)
+            
+            // Perform login by calling Firebase APIs
+            Auth.auth().signIn(with: credential, completion: { (user, error) in
+                if let error = error {
+                    print("Login error: \(error.localizedDescription)")
+                    let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
+                    let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    alertController.addAction(okayAction)
+                    self.present(alertController, animated: true, completion: nil)
+                    
+                    return
+                }
+                AuthService.instance.registerFbUser(withEmail: (Auth.auth().currentUser?.email)!, userCreationComplete: { (created) in
+                    if created {
+                        self.dismiss(animated: true, completion: nil)
+                    }
+                })
+            })
         }
     }
-    
 }
